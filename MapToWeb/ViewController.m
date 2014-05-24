@@ -26,7 +26,29 @@
     region.span.longitudeDelta = 0.005;
     [myMapView setRegion:region animated:YES];
     
+    lm =[[CLLocationManager alloc] init];
+    lm.delegate = self;
+    lm.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    lm.distanceFilter = kCLHeadingFilterNone;
+    [lm startUpdatingLocation];
+    
+    MKPointAnnotation *pin = [[MKPointAnnotation alloc]init];
+    CLLocationCoordinate2D point;
+    point.latitude = 41.842011;
+    point.longitude = 140.766987;
+    [pin setCoordinate:point];
+    pin.title = @"公立はこだて未来大学";
+    pin.subtitle = @"亀田中野町116番地2";
+    [myMapView addAnnotation:pin];
+    
+    
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    myMapView.showsUserLocation = YES;
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
