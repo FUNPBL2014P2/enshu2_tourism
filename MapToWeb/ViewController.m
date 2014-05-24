@@ -63,6 +63,7 @@
     annotationView.pinColor = MKPinAnnotationColorPurple;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     
+    //ピンのタイトル表示時にボタンを表示
     UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     annotationView.rightCalloutAccessoryView = button;
     
