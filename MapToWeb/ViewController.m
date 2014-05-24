@@ -41,14 +41,34 @@
     pin.subtitle = @"亀田中野町116番地2";
     [myMapView addAnnotation:pin];
     
-    
+    myMapView.delegate = self;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
     myMapView.showsUserLocation = YES;
 }
 
-
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) Annotation{
+    
+    MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [myMapView dequeueReusableAnnotationViewWithIdentifier: @"my_annotaion"];
+    
+    if(annotationView == nil){
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: Annotation reuseIdentifier:@"my_annotaion"];
+    }else{
+        annotationView.annotation = Annotation;
+    }
+    
+    annotationView.animatesDrop = YES;
+    annotationView.canShowCallout = YES;
+    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    //ピンのタイトル表示時にボタンを表示
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.rightCalloutAccessoryView = button;
+    
+    return annotationView;
+}
 
 - (void)didReceiveMemoryWarning
 {
