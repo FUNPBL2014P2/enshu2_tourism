@@ -21,6 +21,7 @@
 		4A436DB0192F4791000BBA83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A436D92192F4791000BBA83 /* UIKit.framework */; };
 		4A436DB8192F4791000BBA83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A436DB6192F4791000BBA83 /* InfoPlist.strings */; };
 		4A436DBA192F4791000BBA83 /* MapToWebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A436DB9192F4791000BBA83 /* MapToWebTests.m */; };
+		9C566173193083C600D9B9E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C566172193083C600D9B9E9 /* CoreLocation.framework */; };
 		9CFC549F19303C2500CD5413 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFC549E19303C2500CD5413 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		4A436DB5192F4791000BBA83 /* MapToWebTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapToWebTests-Info.plist"; sourceTree = "<group>"; };
 		4A436DB7192F4791000BBA83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A436DB9192F4791000BBA83 /* MapToWebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapToWebTests.m; sourceTree = "<group>"; };
+		9C566172193083C600D9B9E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9CFC549E19303C2500CD5413 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C566173193083C600D9B9E9 /* CoreLocation.framework in Frameworks */,
 				9CFC549F19303C2500CD5413 /* MapKit.framework in Frameworks */,
 				4A436D91192F4791000BBA83 /* CoreGraphics.framework in Frameworks */,
 				4A436D93192F4791000BBA83 /* UIKit.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		4A436D8D192F4791000BBA83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C566172193083C600D9B9E9 /* CoreLocation.framework */,
 				9CFC549E19303C2500CD5413 /* MapKit.framework */,
 				4A436D8E192F4791000BBA83 /* Foundation.framework */,
 				4A436D90192F4791000BBA83 /* CoreGraphics.framework */,
