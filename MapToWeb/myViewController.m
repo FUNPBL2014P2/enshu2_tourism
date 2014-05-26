@@ -45,6 +45,19 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
+- (IBAction)back:(id)sender {
+        [self.myWebView goBack];
+    }
+- (IBAction)next:(id)sender {
+        [self.myWebView goForward];
+    }
+- (IBAction)reload:(id)sender {
+        [self.myWebView reload];
+    }
+- (IBAction)stop:(id)sender {
+        [self.myWebView stopLoading];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }
 /*
 #pragma mark - Navigation
 
