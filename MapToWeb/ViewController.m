@@ -70,8 +70,12 @@
     return annotationView;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    // push the detail view
+    [self performSegueWithIdentifier:@"toWeb" sender:self];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
