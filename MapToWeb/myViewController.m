@@ -57,7 +57,6 @@
 - (IBAction)stop:(id)sender {
         [self.myWebView stopLoading];
     }
-+
 /*
 #pragma mark - Navigation
 
