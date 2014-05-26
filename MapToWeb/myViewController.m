@@ -56,6 +56,7 @@
     }
 - (IBAction)stop:(id)sender {
         [self.myWebView stopLoading];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
 /*
 #pragma mark - Navigation
